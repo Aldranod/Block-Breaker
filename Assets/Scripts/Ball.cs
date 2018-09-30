@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
     // config params
     [SerializeField] Paddle paddle1;
     [SerializeField] float xPush = 2f;
-    [SerializeField] float yPush = 15f;
+    [SerializeField] float yPush = 1f;
     [SerializeField] AudioClip[] ballSounds;
 
     // state
