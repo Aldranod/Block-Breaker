@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Level : MonoBehaviour {
 
+    //parameters
     [SerializeField] int breakableBlocks; //for debugging purpose
 
     //casched reference
