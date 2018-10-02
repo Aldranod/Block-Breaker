@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour {
 
-    //parameters
-    [SerializeField] int breakableBlocks; //for debugging purpose
+    //config parameters
+    [SerializeField] int breakableBlocks; //onlky serialized for debugging purpose
 
     //casched reference
     SceneLoader sceneloader;
@@ -14,7 +14,7 @@ public class Level : MonoBehaviour {
     {
         sceneloader = FindObjectOfType<SceneLoader>();
     }
-    public void CountBreakableBlocks()
+    public void CountBlocks()
     {
         breakableBlocks++;
     }
