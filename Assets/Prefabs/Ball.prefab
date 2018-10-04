@@ -187,12 +187,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddle1: {fileID: 0}
   xPush: 2
-  yPush: 15
+  yPush: 13
   ballSounds:
   - {fileID: 8300000, guid: 853786d8bca422b4c854d1922e778825, type: 3}
   - {fileID: 8300000, guid: aa9725eb43630974d9f81db0f200f987, type: 3}
   - {fileID: 8300000, guid: c26345b018bb63742afa65aa653bebc1, type: 3}
   - {fileID: 8300000, guid: fe82c1798fb0abe449d84ad2999b3309, type: 3}
+  randomFactor: 0.1
 --- !u!212 &212430003626742938
 SpriteRenderer:
   m_ObjectHideFlags: 1

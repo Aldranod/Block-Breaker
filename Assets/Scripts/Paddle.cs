@@ -10,19 +10,37 @@ public class Paddle : MonoBehaviour {
     [SerializeField] float minX = 1f;
     [SerializeField] float maxX = 15f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        // mousePosInUnits - pozycja myszy na osi x podzielona przez szerokośc ekranu daje zakres 0 do 1, pomnozone przez szerokośc kamery (jednostki unit)
+    //cached references
+    GameSession theGameSession;
+    Ball theBall;
+
+    // Use this for initialization
+    void Start() {
+        theGameSession = FindObjectOfType<GameSession>();
+        theBall = FindObjectOfType<Ball>();
+
+    }
+
+    // Update is called once per frame
+    void Update() {
+        // GetxPos - pozycja myszy na osi x podzielona przez szerokośc ekranu daje zakres 0 do 1, pomnozone przez szerokośc kamery (jednostki unit) 
+        // lub jesli autoplay to zwraca pozycje ball na osi x
         // Vector2 to koordynaty obiektu (x,y), jest to tez typ zmiennej w Unity, słowo kluczowe new oznacza nową instancje zadeklarowanej zmiennej
         // transform.position - tak dostajemy sie do komponentu danego obiektu i updatujemy go w kazdej klatce animacji
-        float mousePosInUnits = Input.mousePosition.x / Screen.width * screenWidthUnits;
-        Vector2 paddlePos = new Vector2(transform.position.x,transform.position.y);
-        paddlePos.x = Mathf.Clamp(mousePosInUnits, minX, maxX);
+        Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y);
+        paddlePos.x = Mathf.Clamp(GetXPos(), minX, maxX);
         transform.position = paddlePos;
-	}
+    }
+
+    private float GetXPos()
+    {
+        if(theGameSession.IsAutoPlayEnabled())
+        {
+            return theBall.transform.position.x;
+        }
+        else
+        {
+            return Input.mousePosition.x / Screen.width * screenWidthUnits;
+        }
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level : MonoBehaviour {
 
     //config parameters
-    [SerializeField] int breakableBlocks; //onlky serialized for debugging purpose
+    [SerializeField] int breakableBlocks; //only serialized for debugging purpose
 
     //casched reference
     SceneLoader sceneloader;

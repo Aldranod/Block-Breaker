@@ -772,11 +772,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224632254900690916, guid: 3f02b7b097ad30846b4fa23c5753460f,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4590194602407996, guid: 3f02b7b097ad30846b4fa23c5753460f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8.482438
@@ -3842,11 +3837,6 @@ Prefab:
       propertyPath: paddle1
       value: 
       objectReference: {fileID: 99696864}
-    - target: {fileID: 114123229393893190, guid: f7a3843844aa9ee44b7799ecc79cb594,
-        type: 2}
-      propertyPath: yPush
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a3843844aa9ee44b7799ecc79cb594, type: 2}
   m_IsPrefabAsset: 0
