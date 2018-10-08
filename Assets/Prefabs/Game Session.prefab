@@ -204,7 +204,7 @@ MonoBehaviour:
   gameSpeed: 0.56
   pointsPerBlockDestroyed: 5
   scoreText: {fileID: 114202966932800972}
-  isAutoPlayEnabled: 1
+  isAutoPlayEnabled: 0
   currentScore: 0
 --- !u!114 &114603914102163438
 MonoBehaviour:
